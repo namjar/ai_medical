@@ -1,66 +1,97 @@
-# Medical Imaging Diagnosis Agent
+# 医疗影像 AI 助手 | Medical Imaging AI Assistant
 
-A Medical Imaging Diagnosis Agent build on phidata powered by Gemini 2.0 Flash Experimental that provides AI-assisted analysis of medical images of various scans. The agent acts as a medical imaging diagnosis expert to analyze various types of medical images and videos, providing detailed diagnostic insights and explanations.
+[English](README_EN.md) | 简体中文
 
-## Features
+基于 Gemini Pro Vision 的医疗影像分析助手，支持多种医疗图像格式的智能分析。
 
-- **Comprehensive Image Analysis**
-  - Image Type Identification (X-ray, MRI, CT scan, ultrasound)
-  - Anatomical Region Detection
-  - Key Findings and Observations
-  - Potential Abnormalities Detection
-  - Image Quality Assessment
-  - Research and Reference
+## 功能特点
 
-## How to Run
+- 支持多种医疗图像格式 (JPEG, PNG, DICOM)
+- 智能识别图像类型
+- 提供解剖位置分析
+- 生成专业医学发现报告
+- 多语言支持 (中文/英文)
 
-1. **Setup Environment**
+## 快速开始
+
+### 环境要求
+- Python 3.9+
+- pip 包管理器
+
+### 安装步骤
+
+1. 克隆仓库
+```bash
+git clone https://github.com/namjar/ai_medical.git
+cd ai_medical
+```
+
+2. **创建虚拟环境**
+```bash
+  python -m venv .venv
+  source .venv/bin/activate  # macOS/Linux
+```
+
+
+3. **安装依赖**
    ```bash
-   # Clone the repository
-   git clone https://github.com/Shubhamsaboo/awesome-llm-apps.git
-   cd ai_agent_tutorials/ai_medical_imaging_agent
-
-   # Install dependencies
    pip install -r requirements.txt
    ```
 
-2. **Configure API Keys**
-   - Get Google API key from [Google AI Studio](https://aistudio.google.com)
+3. **配置 API 密钥**
+   - 从 [Google AI Studio](https://aistudio.google.com) 获取 Google API 密钥
 
-3. **Run the Application**
+4. **配置环境变量**
+```bash
+  export GOOGLE_API_KEY='your-api-key'
+  export LANGUAGE_DEFAULT='zh-CN'
+   ```
+
+5. **运行应用程序**
    ```bash
    streamlit run ai_medical_imaging.py
    ```
 
-## Analysis Components
+6. **项目结构**
+   ```bash
+     ai_medical/
+  ├── ai_medical_imaging.py  # 主程序
+  ├── requirements.txt       # 依赖配置
+  ├── locales/              # 多语言支持
+  │   └── zh-CN/           
+  │       └── translation.json
+  └── README.md
+  ```
 
-- **Image Type and Region**
-  - Identifies imaging modality
-  - Specifies anatomical region
+## 分析组件
 
-- **Key Findings**
-  - Systematic listing of observations
-  - Detailed appearance descriptions
-  - Abnormality highlighting
+- **图像类型和区域**
+  - 识别成像模式
+  - 指定解剖区域
 
-- **Diagnostic Assessment**
-  - Potential diagnoses ranking
-  - Differential diagnoses
-  - Severity assessment
+- **主要发现**
+  - 系统列出观察结果
+  - 详细的外观描述
+  - 异常高亮
 
-- **Patient-Friendly Explanations**
-  - Simplified terminology
-  - Detailed first-principles explanations
-  - Visual reference points
+- **诊断评估**
+  - 潜在诊断排名
+  - 鉴别诊断
+  - 严重程度评估
 
-## Notes
+- **患者友好解释**
+  - 简化术语
+  - 详细的基本原理解释
+  - 视觉参考点
 
-- Uses Gemini 2.0 Flash for analysis
-- Requires stable internet connection
-- API usage costs apply
-- For educational and development purposes only
-- Not a replacement for professional medical diagnosis
+## 注意事项
 
-## Disclaimer
+- 使用 Gemini 2.0 Flash 进行分析
+- 需要稳定的互联网连接
+- API 使用费用适用
+- 仅供教育和开发用途
+- 不能替代专业的医学诊断
 
-This tool is for educational and informational purposes only. All analyses should be reviewed by qualified healthcare professionals. Do not make medical decisions based solely on this analysis.
+## 免责声明
+
+此工具仅供教育和信息用途。所有分析应由合格的医疗专业人员审核。不要仅根据此分析做出医疗决策。
