@@ -53,7 +53,7 @@ cd ai_medical
    ```
 
 6. **项目结构**
-
+```
      ai_medical/
   ├── ai_medical_imaging.py  # 主程序
   ├── requirements.txt       # 依赖配置
@@ -61,6 +61,7 @@ cd ai_medical
   │   └── zh-CN/           
   │       └── translation.json
   └── README.md
+  ```
 
 
 ## 分析组件
